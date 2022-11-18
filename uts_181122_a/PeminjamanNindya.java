@@ -112,7 +112,7 @@ public class PeminjamanNindya
     
     //TotalHutang
     public int getTotalHutang() {
-        TotalHutang = (int) (JumlahPinjaman * Bunga);    
+        TotalHutang = (int) (JumlahPinjaman + Bunga);    
         return TotalHutang;
     }
     
