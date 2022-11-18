@@ -16,11 +16,11 @@ import java.util.Scanner;
 public class PeminjamanNindyaExample {
     public static void main(String[] args) {
         PeminjamanNindya nasabah1 = new PeminjamanNindya ();
-        nasabah1.setKodePeminjaman("1023A");
-        nasabah1.setTanggal("18 November 2022");
-        nasabah1.setKodeNasabah("B01");
-        nasabah1.setNamaNasabah("Apriani");
-        nasabah1.setJumlahPinjaman(300000);
+        nasabah1.setKodePeminjaman("1032A");
+        nasabah1.setTanggal("24 Agustus 2022");
+        nasabah1.setKodeNasabah("A002");
+        nasabah1.setNamaNasabah("Wahyuni");
+        nasabah1.setJumlahPinjaman(400000);
         nasabah1.setLamaPinjaman(12);
         
         System.out.println("Kode Peminjam       : " +nasabah1.getKodePeminjaman());
