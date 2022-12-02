@@ -9,6 +9,7 @@ package nindy041122;
  *
  * @author hp
  */
+
 public class StudentRecord 
 { 
     private String name; 
@@ -22,6 +23,25 @@ public class StudentRecord
     //area penulisan kode selanjutnya 
     
     private static int studentCount;
+    
+    public StudentRecord(){ 
+        
+    }
+    
+    public StudentRecord(String temp){
+        this.name = temp;
+    }
+    
+    public StudentRecord(String name, String address){
+        this.name = name;
+        this.address = address;
+    }
+    
+    public StudentRecord(double mGrade, double eGrade,double sGrade){
+        mathGrade=mGrade;
+        englishGrade=eGrade;
+        scienceGrade=sGrade;
+    }
     
     public String getName(){ 
         return name; 
