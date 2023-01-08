@@ -24,6 +24,7 @@ public class FormAnggota extends javax.swing.JFrame {
         initComponents();
         controller = new AnggotaController(this); 
         controller.bersihForm();
+        controller.tampil();
     }
 
     public JTable getTblAnggota() {
@@ -67,6 +68,7 @@ public class FormAnggota extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("FormAnggota");
         getContentPane().setLayout(null);
 
         txtNobp.setText("jTextField1");
@@ -119,6 +121,11 @@ public class FormAnggota extends javax.swing.JFrame {
         btnDelete.setBounds(340, 190, 77, 29);
 
         btnCancel.setText("Cancel");
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCancel);
         btnCancel.setBounds(490, 190, 79, 29);
 
@@ -130,6 +137,11 @@ public class FormAnggota extends javax.swing.JFrame {
                 "No BP", "Nama", "Alamat"
             }
         ));
+        tblAnggota.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblAnggotaMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblAnggota);
 
         getContentPane().add(jScrollPane1);
@@ -161,15 +173,43 @@ public class FormAnggota extends javax.swing.JFrame {
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+        controller.deleteAnggota();
+        controller.tampil();
+        controller.bersihForm();
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnInsertActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertActionPerformed
         // TODO add your handling code here:
+        controller.saveAnggota();
+        controller.tampil();
+        controller.bersihForm();
     }//GEN-LAST:event_btnInsertActionPerformed
-
+    
+    private void btnUpdatetActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }
+    
+    private void btnCanceltActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+        controller.bersihForm();
+    }
+    
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
+        controller.updateAnggota();
+        controller.tampil();
+        controller.bersihForm();
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void tblAnggotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAnggotaMouseClicked
+        // TODO add your handling code here:
+        controller.getAnggota();
+    }//GEN-LAST:event_tblAnggotaMouseClicked
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        // TODO add your handling code here:
+        controller.bersihForm();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments
