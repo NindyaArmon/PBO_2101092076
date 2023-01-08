@@ -15,6 +15,14 @@ import java.util.ArrayList;
 public class AnggotaDaoImpl implements AnggotaDao{
 
     private List<Anggota> data = new ArrayList<>();
+    
+    public AnggotaDaoImpl()
+    {
+        data.add(new Anggota("lili1","Ali","Padang"));
+        data.add(new Anggota("lili2","Ani","Padang"));
+        data.add(new Anggota("lili3","Budi","Padang Panjang"));
+    }
+    
     @Override
     public Anggota save(Anggota anggota) {
         data.add(anggota);
