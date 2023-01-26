@@ -145,7 +145,7 @@ public class FormAnggota extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblAnggota);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(40, 240, 550, 402);
+        jScrollPane1.setBounds(40, 260, 550, 402);
 
         jLabel1.setText("No BP");
         getContentPane().add(jLabel1);
@@ -184,10 +184,6 @@ public class FormAnggota extends javax.swing.JFrame {
         controller.tampil();
         controller.bersihForm();
     }//GEN-LAST:event_btnInsertActionPerformed
-    
-    private void btnUpdatetActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
-    }
     
     private void btnCanceltActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
@@ -241,6 +237,7 @@ public class FormAnggota extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new FormAnggota().setVisible(true);
             }
